@@ -94,7 +94,6 @@
     <Content Include="Styles\Images\Slider\templatemo_slide03.jpg" />
     <Content Include="Styles\Images\Slider\templatemo_slide04.jpg" />
     <Content Include="Styles\Images\steam.jpg" />
-    <Content Include="Styles\jquery.ennui.contentslider.css" />
     <Content Include="src\Main\MainPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Styles\Style.css" />

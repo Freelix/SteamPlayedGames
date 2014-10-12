@@ -46,3 +46,16 @@ C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGames
 C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.csprojResolveAssemblyReference.cache
 C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
 C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.Extensions.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.Primitives.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.WebRequest.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\unirest-net.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.xml
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.Extensions.xml
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.Primitives.xml
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\bin\System.Net.Http.WebRequest.xml
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+C:\Users\Flix2\git\SteamPlayedGames\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb

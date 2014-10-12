@@ -713,12 +713,20 @@
     <PlayTime>0</PlayTime>
   </Game>
   <Game>
+    <Id>239200</Id>
+    <Name>Amnesia: A Machine for Pigs</Name>
+    <Status>0</Status>
+    <Score>0</Score>
+    <Image>http://media.steampowered.com/steamcommunity/public/images/apps/239200/5df7be324aa92b538c4ef24cbdec85dbbcf950fc.jpg</Image>
+    <PlayTime>0</PlayTime>
+  </Game>
+  <Game>
     <Id>47790</Id>
     <Name>Medal of Honor(TM) Single Player</Name>
     <Status>0</Status>
     <Score>0</Score>
     <Image>http://media.steampowered.com/steamcommunity/public/images/apps/47790/8a925ea4d40df32587ddae98d4e7fc5a6518b0f7.jpg</Image>
-    <PlayTime>0</PlayTime>
+    <PlayTime>84</PlayTime>
   </Game>
   <Game>
     <Id>252330</Id>
@@ -726,7 +734,7 @@
     <Status>0</Status>
     <Score>0</Score>
     <Image>http://media.steampowered.com/steamcommunity/public/images/apps/252330/da2e5c2ce05f3c1d58562a394da955f620931bbe.jpg</Image>
-    <PlayTime>84</PlayTime>
+    <PlayTime>331</PlayTime>
   </Game>
   <Game>
     <Id>269490</Id>
@@ -734,7 +742,7 @@
     <Status>0</Status>
     <Score>0</Score>
     <Image>http://media.steampowered.com/steamcommunity/public/images/apps/269490/2a1b18274d1eb251b87b29cbed12c69ad9559ed6.jpg</Image>
-    <PlayTime>331</PlayTime>
+    <PlayTime>0</PlayTime>
   </Game>
   <Game>
     <Id>277430</Id>
@@ -742,14 +750,6 @@
     <Status>0</Status>
     <Score>0</Score>
     <Image>http://media.steampowered.com/steamcommunity/public/images/apps/277430/5b8a0774b816b0edeaac1cbf2deeaec26dd486a8.jpg</Image>
-    <PlayTime>0</PlayTime>
-  </Game>
-  <Game>
-    <Id>222900</Id>
-    <Name>Dead Island: Epidemic</Name>
-    <Status>0</Status>
-    <Score>0</Score>
-    <Image>http://media.steampowered.com/steamcommunity/public/images/apps/222900/e5b801707f7373d69eab3f15b6fdb02f7270374a.jpg</Image>
     <PlayTime>0</PlayTime>
   </Game>
   <Game>
