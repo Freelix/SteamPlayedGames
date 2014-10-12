@@ -1,0 +1,86 @@
+﻿.game 
+{
+    clear: both;
+    display: block;
+}
+
+.greenCheck
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    opacity: 0.1;
+}
+
+.greenCheck:hover
+{
+    /*opacity: 1.0;*/
+    cursor: pointer;
+}
+
+.redX
+{
+    width: 30px;
+    height: 30px;
+    opacity: 0.1;
+}
+
+.redX:hover
+{
+    /*opacity: 1.0;*/
+    cursor: pointer;
+}
+
+.metaScore
+{
+    margin-left: 10px;
+    font-size: large;
+    position: relative;
+    bottom: 8px;
+    font-weight: bold;
+    border-style: solid;
+}
+
+.playTime
+{
+    margin-left: 20px;
+    font-size: large;
+    position: relative;
+    bottom: 8px;
+}
+
+.gameImage
+{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    clear: both;
+}
+
+.separation
+{
+    height: 10px;
+    margin: 30px;
+}
+
+.separationHeader
+{
+    margin-top: 30px;
+}
+
+.separationHeaderBottom
+{
+    margin-bottom: 250px;
+}
+
+.toggler { width: 500px; height: 200px; }
+#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+
+.progressLabel
+{
+    font-size: 36px;
+    color: White;
+    font-weight: bold;    
+    margin-left: 45%;
+}

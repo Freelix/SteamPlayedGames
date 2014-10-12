@@ -1,0 +1,48 @@
+c:\users\flix\documents\visual studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+c:\users\flix\documents\visual studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+c:\users\flix\documents\visual studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+c:\users\flix\documents\visual studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\ResolveAssemblyReference.cache
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
+C:\Users\Flix\documents\visual studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.csprojResolveAssemblyReference.cache
+D:\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\ResolveAssemblyReference.cache
+D:\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\FluentMetacritic.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\HtmlAgilityPack.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Extensions.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Primitives.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.WebRequest.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\unirest-net.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\FluentMetacritic.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\HtmlAgilityPack.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\HtmlAgilityPack.xml
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.xml
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Extensions.xml
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Primitives.xml
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.WebRequest.xml
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
+D:\SteamGamesPlayed\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.csprojResolveAssemblyReference.cache
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\SteamGamesPlayed.pdb
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Extensions.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Primitives.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.WebRequest.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\unirest-net.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.xml
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Extensions.xml
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.Primitives.xml
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\bin\System.Net.Http.WebRequest.xml
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.csprojResolveAssemblyReference.cache
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.dll
+C:\Users\Flix2\Documents\Visual Studio 2010\Projects\SteamGamesPlayed\SteamGamesPlayed\obj\Debug\SteamGamesPlayed.pdb
