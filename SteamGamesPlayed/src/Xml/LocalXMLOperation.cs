@@ -87,29 +87,6 @@ namespace SteamGamesPlayed
             xmlDoc.Save(this.path);
         }
 
-        /*public void LoadDataFromXml()
-        {
-            // Retrieve a list of all specified nodes
-            XElement file = XElement.Load(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
-            IEnumerable<XElement> elements = file.Descendants("Game");
-
-            string id, name, image, playTime;
-            int score;
-            GameItem.Status status;
-
-            foreach (XElement el in elements)
-            {
-                id = ((XElement)(((XContainer)(el)).FirstNode)).Value;
-                name = ((XElement)(((XContainer)(el)).FirstNode.NextNode)).Value;
-                status = (GameItem.Status) Enum.Parse(typeof(GameItem.Status), ((XElement)(((XContainer)(el)).FirstNode.NextNode.NextNode)).Value);
-                score = Convert.ToInt32(((XElement)(((XContainer)(el)).LastNode.PreviousNode.PreviousNode)).Value);
-                image = ((XElement)(((XContainer)(el)).LastNode.PreviousNode)).Value;
-                playTime = ((XElement)(((XContainer)(el)).LastNode)).Value;
-
-                new GameItem(id, name, image, score, status, playTime);
-            }
-        }*/
-
         public List<GameItem> RetrieveDataFromXml()
         {
             List<GameItem> lgi = new List<GameItem>();

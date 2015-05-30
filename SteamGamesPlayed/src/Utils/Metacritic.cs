@@ -5,6 +5,8 @@ using System.Web;
 using unirest_net.http;
 using unirest_net.request;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using FluentMetacritic.Domain;
 
 /*
  * NuGet Package Manager - Extension
@@ -83,21 +85,32 @@ namespace SteamGamesPlayed
         public Metacritic GetDataFromMetacritic(string name)
         {
             string platform = "PC";
-            var result = FluentMetacritic.Metacritic.SearchFor().Games().UsingText(name);
 
-            foreach (var el in result)
+            IEnumerable<IGame> result = null;
+
+            try
             {
-                if (el.Platform == platform)
-                {
-                    description = el.Description;
-                    score = el.Score;
-                    releaseDate = el.ReleaseDate;
-                    rating = el.MaturityRating;
-                    publisher = el.Publisher;
-
-                    return this;
-                }
+                result = FluentMetacritic.Metacritic.SearchFor().Games().UsingText(name);
             }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Error occured : " + e.Message);
+            }
+
+            if (result != null)
+                foreach (var el in result)
+                {
+                    if (el.Platform == platform)
+                    {
+                        description = el.Description;
+                        score = el.Score;
+                        releaseDate = el.ReleaseDate;
+                        rating = el.MaturityRating;
+                        publisher = el.Publisher;
+
+                        return this;
+                    }
+                }
 
             return null;
         }

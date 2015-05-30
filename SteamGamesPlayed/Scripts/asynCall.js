@@ -14,14 +14,6 @@
                     $("#green_" + response.d).css("opacity", "1.0");
 
                     $("#red_" + response.d).css("opacity", "0.1");
-
-                    /*$("#red_" + response.d).on("mouseover", function () {
-                        $(this).css("opacity", "1.0"); 
-                    });
-
-                    $("#red_" + response.d).on("mouseleave", function () {
-                        $(this).css("opacity", "0.1");
-                    });*/
                 }
             });
         });
@@ -42,14 +34,6 @@
                     $("#red_" + response.d).css("opacity", "1.0");
 
                     $("#green_" + response.d).css("opacity", "0.1");
-
-                    /*$("#green_" + response.d).on("mouseover", function () {
-                        $(this).css("opacity", "1.0");
-                    });
-
-                    $("#green_" + response.d).on("mouseleave", function () {
-                        $(this).css("opacity", "0.1");
-                    });*/
                 }
             });
         });

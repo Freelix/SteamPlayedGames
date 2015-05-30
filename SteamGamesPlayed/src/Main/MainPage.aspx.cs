@@ -25,6 +25,7 @@ namespace SteamGamesPlayed
         public MainPage()
         {
             context = HttpContext.Current;
+
             // Create the delegate for the progress update.
             this.mProgressDelegate = new ProgressUpdateDelegate(this.SetCurrentGameLabel);
         }
@@ -41,7 +42,6 @@ namespace SteamGamesPlayed
         {
 
             // Buttons links (must be on each load)
-            BtnOrderByRelevance.Click += new EventHandler(this.OrderByRelevance);
             BtnOrderByAlpha.Click += new EventHandler(this.OrderByAlphabetical);
             BtnOrderByCompleted.Click += new EventHandler(this.OrderByStatusCompleted);
             BtnOrderByTimePlayed.Click += new EventHandler(this.OrderByTimePlayed);
@@ -96,7 +96,7 @@ namespace SteamGamesPlayed
                 }
 
                 aDiv.Controls.Add(new LiteralControl("<label class=\"metaScore\" style=\"color: " + gi.Color + ";\">" + gi.Score + "</label>"));
-                aDiv.Controls.Add(new LiteralControl("<label class=\"playTime\">" + gi.PlayTime + "</label>"));
+                aDiv.Controls.Add(new LiteralControl("<label class=\"playTime\">" + gi.FormatedPlayTime + "</label>"));
                 aDiv.Controls.Add(new LiteralControl("<img class=\"gameImage\" src=\"" + gi.Image + "\" alt=\"" + gi.Name + "\"/>"));
                 aDiv.Controls.Add(new LiteralControl("<h3 class=\"gameTitle\">" + gi.Name + "</h3>"));
 
@@ -127,13 +127,6 @@ namespace SteamGamesPlayed
 
         #region Buttons
 
-        protected void OrderByRelevance(Object sender, EventArgs e)
-        {
-            RemoveControls();
-            List<GameItem> listGames = GameItemCollection.OrderByRelevance();
-            AddHeader(Constants.RELEVANCE, listGames);
-        }
-
         protected void OrderByAlphabetical(Object sender, EventArgs e)
         {
             RemoveControls();
@@ -153,6 +146,10 @@ namespace SteamGamesPlayed
         protected void OrderByTimePlayed(Object sender, EventArgs e)
         {
             RemoveControls();
+
+            string totalTimePlayed = GameItemCollection.GetTotalPlayTime();
+            PageColumns.Controls.Add(new LiteralControl(string.Format("<h2 class=\"separationHeader\">Total play time: {0}</h2>", totalTimePlayed)));
+
             List<GameItem> listGames = GameItemCollection.OrderByPlayTime();
             AddHeader(Constants.ORDER_PT, listGames);
         }

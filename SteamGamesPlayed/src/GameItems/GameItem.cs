@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -24,6 +25,7 @@ namespace SteamGamesPlayed
         private int score;
         private string color;
         private string playTime;
+        private string formatedPlayTime;
 
         #endregion
 
@@ -39,20 +41,7 @@ namespace SteamGamesPlayed
             this.meta = new Metacritic();
             this.playTime = GetTimeFromOnlineXml(playTime);
             this.color = "#FFFFFF";
-            //GameItemCollection.AddGame(this);
         }
-
-        /*public GameItem(string id, string name, string image, int metaScore, string playTime)
-        {
-            this.id = id;
-            this.name = name.Replace("\"", "\\\""); ;
-            this.image = ConstructLogoUrl(image.Replace("\"", "\\\""));
-            this.option = Status.NotPlayed;
-            this.metaScore = metaScore;
-            this.playTime = GetTimeFromOnlineXml(playTime);
-            EvaluateScore();
-            GameItemCollection.AddGame(this);
-        }*/
 
         // Used by LocalXMLOperation
         public GameItem(string id, string name, string image, int score, GameItem.Status status, string playTime)
@@ -65,7 +54,6 @@ namespace SteamGamesPlayed
             this.score = score;
             this.playTime = playTime;
             EvaluateScore();
-            //GameItemCollection.AddGame(this);
         }
         
         #endregion
@@ -116,8 +104,27 @@ namespace SteamGamesPlayed
 
         public string PlayTime
         {
-            get { return playTime; }
-            set { playTime = value; }
+            get 
+            {
+                return playTime; 
+            }
+            set 
+            { 
+                playTime = value;
+                FormatedPlayTime = value;
+            }
+        }
+
+        public string FormatedPlayTime
+        {
+            get
+            {
+                return formatedPlayTime;
+            }
+            set 
+            {
+                formatedPlayTime = Utils.FormatPlayTime(value);
+            }
         }
 
         #endregion

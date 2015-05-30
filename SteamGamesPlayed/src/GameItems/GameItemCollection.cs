@@ -6,6 +6,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Diagnostics;
 using System.Threading;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -62,14 +63,19 @@ namespace SteamGamesPlayed
 
         public static List<GameItem> OrderByPlayTime()
         {
-            List<int> listTime = new List<int>();
+            return games.OrderBy(x => x.PlayTime, new NumericComparator()).ToList();
+        }
 
-            foreach (GameItem gi in games)
-            {
-                listTime.Add(Convert.ToInt32(gi.PlayTime.Split('h')[0] + gi.PlayTime.Split('h')[1]));
+        public static string GetTotalPlayTime()
+        {
+            int totalPlayTime = 0;
+
+            foreach (GameItem gi in games) {
+                if (Utils.IsNumeric(gi.PlayTime))
+                    totalPlayTime += Convert.ToInt32(gi.PlayTime);
             }
 
-            return games.OrderByDescending(x => x.PlayTime).ToList();
+            return Utils.FormatPlayTime(totalPlayTime);
         }
 
         public static void UpdateAGame(string strId)

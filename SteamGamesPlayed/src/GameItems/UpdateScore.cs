@@ -43,7 +43,7 @@ namespace SteamGamesPlayed
                 if (gi.Meta != null && gi.Meta.Score != null)
                     localXml.SaveScoreToXml(gi.Id, gi.Meta.Score);
 
-                Debug.WriteLine("A game has been modified: " + gi.Name);
+                Debug.WriteLine("A game has been modified: " + gi.Name + " with " + gi.Score);
                 reportProgressToUI(gi.Name);
 
                 lgi.Add(gi);

@@ -74,12 +74,6 @@ namespace SteamGamesPlayed
                         lgiIndex++;
                     }
 
-                    //Metacritic mc = new Metacritic();
-                    //gi.Meta = mc.GetDataFromMetacritic(gi.Name);
-
-                    //TODO: Check which constructor to call in both case
-
-                    // We add the game into the collection
                     GameItemCollection.AddGame(gi);
                 }
             }
