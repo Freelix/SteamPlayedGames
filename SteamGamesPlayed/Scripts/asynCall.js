@@ -5,7 +5,7 @@
         $(function () {
             $.ajax({
                 type: 'POST',
-                url: 'MainPage.aspx/SaveStatus', // Call the function here
+                url: 'src/Main/MainPage.aspx/SaveStatus', // Call the function here
                 data: JSON.stringify({ strId: id }), // Put the parameters here
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
@@ -25,7 +25,7 @@
         $(function () {
             $.ajax({
                 type: 'POST',
-                url: 'MainPage.aspx/SaveStatus',
+                url: 'src/Main/MainPage.aspx/SaveStatus',
                 data: JSON.stringify({ strId: id }),
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',

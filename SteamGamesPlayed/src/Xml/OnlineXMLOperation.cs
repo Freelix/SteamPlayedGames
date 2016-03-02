@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Xml.Linq;
 using System.Xml;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -57,7 +58,7 @@ namespace SteamGamesPlayed
                 numberOfGames = listNames.Count;
 
                 // Load local xml
-                LocalXMLOperation localXml = new LocalXMLOperation(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+                LocalXMLOperation localXml = new LocalXMLOperation(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
                 List<GameItem> lgi = localXml.RetrieveDataFromXml();
                 GameItem gi;
                 int lgiIndex = 0;

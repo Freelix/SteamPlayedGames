@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Web.Services;
 using System.Threading;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -21,6 +22,8 @@ namespace SteamGamesPlayed
 
         public delegate void ProgressUpdateDelegate(string progress);
         private ProgressUpdateDelegate mProgressDelegate;
+
+        public bool ShowGames { get; set; }
 
         public MainPage()
         {
@@ -40,29 +43,49 @@ namespace SteamGamesPlayed
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && SteamConnection.IsPostBack && !SteamConnection.IsConnected)
+                SteamConnection.Connection();
 
-            // Buttons links (must be on each load)
-            BtnOrderByAlpha.Click += new EventHandler(this.OrderByAlphabetical);
-            BtnOrderByCompleted.Click += new EventHandler(this.OrderByStatusCompleted);
-            BtnOrderByTimePlayed.Click += new EventHandler(this.OrderByTimePlayed);
-            BtnRetrieveScores.Click += new EventHandler(this.RetrieveScores);
+            SteamConnection.GetCookie();
 
-            if (!Page.IsPostBack)
+            if (IsPostBack && Request.Params["__EVENTTARGET"] != null &&
+                    Request.Params["__EVENTTARGET"].ToString().Contains("LinkLogOut"))
+                SteamConnection.IsConnected = false;
+
+            else if (SteamConnection.IsConnected)
             {
-                onlineXml = new OnlineXMLOperation(Constants.SITE_URL);
-                localXml = new LocalXMLOperation(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+                ShowGames = true;
+                ConnectedAs.Text = "Connected as " + SteamConnection.Username;
 
-                // Delete the items for make sure it doesn't already exist
-                GameItemCollection.DeleteAll();
+                // Buttons links (must be on each load)
+                BtnOrderByAlpha.Click += new EventHandler(this.OrderByAlphabetical);
+                BtnOrderByCompleted.Click += new EventHandler(this.OrderByStatusCompleted);
+                BtnOrderByTimePlayed.Click += new EventHandler(this.OrderByTimePlayed);
+                BtnRetrieveScores.Click += new EventHandler(this.RetrieveScores);
 
-                // Retrieve games and add it to a collection
-                onlineXml.retrieveDataFromXML();
+                if (!Page.IsPostBack)
+                {
+                    onlineXml = new OnlineXMLOperation(SteamConnection.SteamUrl);
+                    localXml = new LocalXMLOperation(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
 
-                // Save the changes in a XML file.
-                localXml.SaveAllDataToXml();
+                    // Delete the items for make sure it doesn't already exist
+                    GameItemCollection.DeleteAll();
 
-                //localXml.LoadDataFromXml();
-                AddHeader(Constants.RELEVANCE, GameItemCollection.Games);
+                    // Retrieve games and add it to a collection
+                    onlineXml.retrieveDataFromXML();
+
+                    // Save the changes in a XML file.
+                    localXml.SaveAllDataToXml();
+
+                    //localXml.LoadDataFromXml();
+                    AddHeader(Constants.RELEVANCE, GameItemCollection.Games);
+                }
+            }
+            else
+            {
+                ShowGames = false;
+
+                BtnSteamConnexion.Click += new ImageClickEventHandler(this.ConnexionWithSteam);
             }
         }
 
@@ -126,6 +149,11 @@ namespace SteamGamesPlayed
         }
 
         #region Buttons
+
+        protected void ConnexionWithSteam(Object sender, EventArgs e)
+        {
+            SteamConnection.Connection();
+        }
 
         protected void OrderByAlphabetical(Object sender, EventArgs e)
         {

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Xml.Linq;
 using System.Xml;
+using System.IO;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -91,46 +93,56 @@ namespace SteamGamesPlayed
         {
             List<GameItem> lgi = new List<GameItem>();
 
-            // Retrieve a list of all specified nodes
-            XElement file = XElement.Load(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
-            IEnumerable<XElement> elements = file.Descendants("Game");
-
-            string id, name, image, playTime;
-            int score;
-            GameItem.Status status;
-
-            foreach (XElement el in elements)
+            if (IsFileExist())
             {
-                id = ((XElement)(((XContainer)(el)).FirstNode)).Value;
-                name = ((XElement)(((XContainer)(el)).FirstNode.NextNode)).Value;
-                status = (GameItem.Status)Enum.Parse(typeof(GameItem.Status), ((XElement)(((XContainer)(el)).FirstNode.NextNode.NextNode)).Value);
-                score = Convert.ToInt32(((XElement)(((XContainer)(el)).LastNode.PreviousNode.PreviousNode)).Value);
-                image = ((XElement)(((XContainer)(el)).LastNode.PreviousNode)).Value;
-                playTime = ((XElement)(((XContainer)(el)).LastNode)).Value;
+                // Retrieve a list of all specified nodes
+                XElement file = XElement.Load(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
+                IEnumerable<XElement> elements = file.Descendants("Game");
 
-                //Metacritic mc = new Metacritic();
-                lgi.Add(new GameItem(id, name, image, score, status, playTime));               
+                string id, name, image, playTime;
+                int score;
+                GameItem.Status status;
+
+                foreach (XElement el in elements)
+                {
+                    id = ((XElement)(((XContainer)(el)).FirstNode)).Value;
+                    name = ((XElement)(((XContainer)(el)).FirstNode.NextNode)).Value;
+                    status = (GameItem.Status)Enum.Parse(typeof(GameItem.Status), ((XElement)(((XContainer)(el)).FirstNode.NextNode.NextNode)).Value);
+                    score = Convert.ToInt32(((XElement)(((XContainer)(el)).LastNode.PreviousNode.PreviousNode)).Value);
+                    image = ((XElement)(((XContainer)(el)).LastNode.PreviousNode)).Value;
+                    playTime = ((XElement)(((XContainer)(el)).LastNode)).Value;
+
+                    //Metacritic mc = new Metacritic();
+                    lgi.Add(new GameItem(id, name, image, score, status, playTime));
+                }
             }
 
             return lgi;
+        }
+
+        private bool IsFileExist()
+        {
+            if (File.Exists(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl())))
+                return true;
+            return false;
         }
 
         #region Update Xml File
 
         public void SaveStatusToXml(string id)
         {
-            xmlDoc.Load(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+            xmlDoc.Load(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
 
             if (UpdateStatusById(id))
-                xmlDoc.Save(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));    
+                xmlDoc.Save(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));    
         }
 
         public void SaveScoreToXml(string id, Nullable<int> score)
         {
-            xmlDoc.Load(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+            xmlDoc.Load(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
 
             if (UpdateScoreById(id, score))
-                xmlDoc.Save(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+                xmlDoc.Save(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
 
         }
 

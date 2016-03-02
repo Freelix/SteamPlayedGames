@@ -13,7 +13,8 @@ namespace SteamGamesPlayed
         public const string PLAY_TIME = "playtime_forever";
         public const string ICON = "img_icon_url";
         public const string LOGO = "img_logo_url";
-        public const string SITE_URL = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=F1854E7F4338467B6BDEDF574669D483&steamid=76561198001807062&format=xml&include_appinfo=1";
+
+        // Status
         public const string STATUS_COMPLETE = "I finished this game";
         public const string STATUS_INCOMPLETE = "I have not finished this game yet";
         
@@ -24,6 +25,13 @@ namespace SteamGamesPlayed
         public const string ALPHABETICAL = "By Alphabetical Order";
         public const string ORDER_PT = "By Playing Time";
         
-        public const string LOCAL_XML_FILE = "../Xml/SavedItems.xml";
+        // XML
+        public const string LOCAL_XML_FILE_ROOT = "~/src/Xml/Accounts/";
+
+        // Steam
+        public const string STEAM_KEY = "F1854E7F4338467B6BDEDF574669D483";
+        public const string STEAM_OPEN_ID = "http://steamcommunity.com/openid";
+        public const string STEAM_PLAYER = "player";
+        public const string STEAM_USERNAME = "personaname";
     }
 }

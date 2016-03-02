@@ -135,3 +135,27 @@
 	position:relative;
 	top:1px;
 }
+
+.btnSteamConnexion {
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: 0 auto;
+}
+
+.connectedAs {
+    color: white;
+    font-size: 16px;
+    margin: 0 5px 0 5px;
+}
+
+.userConnection {
+    position: absolute;
+    right: 105px;
+}
+
+.mainButtons {
+    display: inherit;
+    margin-top: 50px;
+}

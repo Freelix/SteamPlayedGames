@@ -6,6 +6,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Diagnostics;
 using System.Threading;
+using SteamGamesPlayed.src.Utils;
 
 namespace SteamGamesPlayed
 {
@@ -29,7 +30,7 @@ namespace SteamGamesPlayed
 
             List<GameItem> lgi = new List<GameItem>();
             LocalXMLOperation localXml = new LocalXMLOperation();
-            localXml.XmlDoc.Load(HttpContext.Current.Server.MapPath(Constants.LOCAL_XML_FILE));
+            localXml.XmlDoc.Load(HttpContext.Current.Server.MapPath(SteamConnection.GetXmlUrl()));
             Metacritic mc;
 
             Debug.WriteLine("Start...........");

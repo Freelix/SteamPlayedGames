@@ -8,39 +8,53 @@
 <div id="templatemo_content_wrapper">
     <div id="templatemo_content">
         <form id="mainForm" runat="server">
-            <asp:Button ID="BtnOrderByAlpha" CssClass="default_btn" runat="server" Text="Alphabetical Order" />
-            <asp:Button ID="BtnOrderByCompleted" CssClass="default_btn" runat="server" Text="Completed/Incompleted" />
-            <asp:Button ID="BtnOrderByTimePlayed" CssClass="default_btn" runat="server" Text="Order by time played" />
+            <% if (ShowGames)
+            { %>    
+                <div class="userConnection">
+                    <asp:label ID="ConnectedAs" runat="server" CssClass="connectedAs" />
+                    <asp:LinkButton ID="LinkLogOut" runat="server" CssClass="connectedAs" Text="Log Out" />
+                </div>
+
+                <div class="mainButtons">
+                    <asp:Button ID="BtnOrderByAlpha" CssClass="default_btn" runat="server" Text="Alphabetical Order" />
+                    <asp:Button ID="BtnOrderByCompleted" CssClass="default_btn" runat="server" Text="Completed/Incompleted" />
+                    <asp:Button ID="BtnOrderByTimePlayed" CssClass="default_btn" runat="server" Text="Order by time played" />
             
-            <asp:ScriptManager EnablePartialRendering="true" ID="ScriptManagerScores" runat="server"/>
+                    <asp:ScriptManager EnablePartialRendering="true" ID="ScriptManagerScores" runat="server"/>
 
-            <!-- Makes the button BtnRetrieveScores clickable without refreshing the page -->
-            <div class="updatePanelDiv">
-                <asp:UpdatePanel ID="UpdatePanelScores" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:Button ID="BtnRetrieveScores" CssClass="default_btn" runat="server" Text="Retrieve Metacritic's scores" />
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="BtnRetrieveScores" EventName="Click" />
-                    </Triggers>
-                </asp:UpdatePanel>
+                    <!-- Makes the button BtnRetrieveScores clickable without refreshing the page -->
+                    <div class="updatePanelDiv">
+                        <asp:UpdatePanel ID="UpdatePanelScores" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <asp:Button ID="BtnRetrieveScores" CssClass="default_btn" runat="server" Text="Retrieve Metacritic's scores" />
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="BtnRetrieveScores" EventName="Click" />
+                            </Triggers>
+                        </asp:UpdatePanel>
 
-                <!-- Makes the label ProgressLabel refreshing without reloading the page -->
-                <asp:Timer ID="TimerScoreUpdate" runat="server" Interval="500" OnTick="TimerScoreUpdate_Tick" Enabled="false"/> 
-                <asp:UpdatePanel ID="UpdatePanelScoresLabel" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:Label runat="server" ID="ProgressLabel" CssClass="progressLabel" Text="" Visible="false"></asp:Label>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="TimerScoreUpdate" EventName="Tick" />
-                    </Triggers>
-                </asp:UpdatePanel>
-            </div>
+                        <!-- Makes the label ProgressLabel refreshing without reloading the page -->
+                        <asp:Timer ID="TimerScoreUpdate" runat="server" Interval="500" OnTick="TimerScoreUpdate_Tick" Enabled="false"/> 
+                        <asp:UpdatePanel ID="UpdatePanelScoresLabel" runat="server" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <asp:Label runat="server" ID="ProgressLabel" CssClass="progressLabel" Text="" Visible="false"></asp:Label>
+                            </ContentTemplate>
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="TimerScoreUpdate" EventName="Tick" />
+                            </Triggers>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+            <% }
+            else { %>
+                <div class="btnSteamConnexionDiv">
+                    <asp:ImageButton ID="BtnSteamConnexion" CssClass="btnSteamConnexion" runat="server" AlternateText="Steam Connexion" ImageUrl="~/Styles/Images/sits.png" />
+                </div>
+            <% } %>
         </form>
 
         <asp:Panel ID="PageColumns" runat="server"/>
-    
-    	<div class="cleaner"></div>
+
 	</div> <!-- end of content -->
 </div> <!-- end of content_wrapper -->
 </asp:Content>
